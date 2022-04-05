@@ -1,0 +1,20 @@
+interface Pasajero{
+    nombre:string;
+    hijos?:string[];
+}
+
+const pasajero1: Pasajero ={
+    nombre: 'Fernando'
+}
+
+const pasajero2: Pasajero ={
+    nombre: 'Natalia',
+    hijos: ['Natalia', 'Gabriel']
+}
+
+function imprimeHijos(pasajero: Pasajero): void{
+    const cuantosHijos = pasajero.hijos?.length || 0; //Similar a if y se pone ? porque arriba esta marcado como opcional y si no el valor es 0
+    console.log(cuantosHijos);
+}
+
+imprimeHijos(pasajero2);
